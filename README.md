@@ -25,6 +25,9 @@ Download this project files into a folder
 ```text
 follow the instructions in https://github.com/ralphhanna/AI-Eval/blob/main/instructions.md against the repo: https://github.com/sobolevn/python-code-disasters
 ```
+
+![screenshot of ChatGPT results](docs/chatGPT-results.png)
+
 ## ChatGPT local
 1. Attach a zip file of your codebase
 2. in the prompt enter:
@@ -37,13 +40,7 @@ Can you go through each instruction and produce required output
 
 # Output Examples
 
-```json
-{
-  "category": "architecture",
-  "score": 6.5,
-  "recommendation": "Split Engine into focused services for lifecycle orchestration, message routing, locking, and upgrade operations."
-}
-```
+<div style="width:80%;height:300px;border:1px solid black;padding:10px;overflow:auto;margin-left:25px;">
 
 # Ghostfolio Evaluation Using AI-Eval (sample output)
 
@@ -91,17 +88,6 @@ Ghostfolio shows a solid production-oriented architecture foundation, especially
 - detailed recommendation markdown files
 - consolidated `evaluation.json`
 
-## Notes
-
-This evaluation is conservative and evidence-based. It uses the AI-Eval prompt set and publicly visible repository sources, but it does not claim results from executing the test suite or measuring real coverage.
-
-![Bar chart](docs/bar-chart-Ghostfolio.png)
-
----------------------
-
-# Example Output for Exception Handling Evaluation
-
-![screenshot of ChatGPT results](docs/chatGPT-results.png)
 # 06 Exception Handling Evaluation
 
 **Score:** 58/100
@@ -133,3 +119,19 @@ Exception handling is the weakest technical area in the evidence reviewed. There
 - Eliminate empty catch blocks unless there is a documented reason to suppress a failure.
 - Wrap or rethrow exceptions with contextual information where recovery is not possible.
 - Adopt a consistent exception policy for bootstrap, cache, and request-serving code.
+
+## Notes
+
+This evaluation is conservative and evidence-based. It uses the AI-Eval prompt set and publicly visible repository sources, but it does not claim results from executing the test suite or measuring real coverage.
+
+![Bar chart](docs/bar-chart-Ghostfolio.png)
+
+```json
+{
+  "category": "architecture",
+  "score": 6.5,
+  "recommendation": "Split Engine into focused services for lifecycle orchestration, message routing, locking, and upgrade operations."
+}
+```
+</div>
+---------------------
